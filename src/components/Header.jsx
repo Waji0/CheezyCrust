@@ -17,7 +17,7 @@ const Header = () => {
       </Link>
       <form className="flex-1 flex justify-end" onSubmit={(ev) => {
         ev.preventDefault();
-        console.log('Submitting with orderId:', orderId); // Add this
+        // console.log('Submitting with orderId:', orderId);
         navigate(`/order/${orderId}`);
         setOrderId('');
       }} >

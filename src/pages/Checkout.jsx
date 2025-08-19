@@ -42,7 +42,7 @@ const Checkout = () => {
           <div className="overflow-x-auto">
             <table className="table">
               {/* head */}
-              <thead>
+              <thead className="text-[#FF9E00]">
                 <tr>
                   <th>Name</th>
                   <th>Quantity</th>

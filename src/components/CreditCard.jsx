@@ -4,6 +4,8 @@ import { formatCVC, formatCreditCardNumber, formatExpirationDate } from "../util
 import Cards from "react-credit-cards-2";
 import { useKeyPress } from "../hooks/useKeyPress";
 
+
+
 const CreditCard = ({submitHandler}) => {
 
   const formRef = useRef(null);
@@ -51,7 +53,7 @@ const CreditCard = ({submitHandler}) => {
   }
 
   useKeyPress('H', () => {
-    console.log('special key pressed');
+    // console.log('special key pressed');
     setInputValue('number', '2222 2222 2222 2222');
     setInputValue('cvc', '123');
     setInputValue('expiry', '12/25');
@@ -71,7 +73,9 @@ const CreditCard = ({submitHandler}) => {
         name={state.name}
         focused={state.focus}
       />
+
       <div className="form-inputs w-full px-8 flex flex-col gap-4">
+
         <div className="flex flex-col gap-2 w-full">
           <input
             type="text"
@@ -85,6 +89,7 @@ const CreditCard = ({submitHandler}) => {
           />
           <small>Eg: XXXX XXXX XXXX XXXX(XXX)</small>
         </div>
+
         <div>
           <input
             type="text"
@@ -96,6 +101,7 @@ const CreditCard = ({submitHandler}) => {
             onFocus={handleInputFocus}
           />
         </div>
+
         <div>
           <input
             type="tel"
@@ -108,6 +114,7 @@ const CreditCard = ({submitHandler}) => {
             onFocus={handleInputFocus}
           />
         </div>
+
         <div>
           <input
             type="tel"
@@ -120,15 +127,19 @@ const CreditCard = ({submitHandler}) => {
             onFocus={handleInputFocus}
           />
         </div>
+
       </div>
+
       <div className="form-actions w-44">
         <button type="submit" className="btn btn-block btn-sm md:btn-md ml-4 bg-gradient-to-r from-[#FF9E00] to-[#FFB347] text-[#240046] font-semibold tracking-wide text-base shadow-md hover:ring-[#FF9E00] hover:from-[#FFA931] hover:to-[#FFD580] transform transition duration-300 ease-in-out">
           PAY
         </button>
       </div>{" "}
+
       <small className="text-center italic text-xs">
         Press Ctrl + Shift + H to fill the form with fake values
       </small>
+
     </form>
   );
 }
