@@ -6,6 +6,8 @@ import Checkout from "./pages/Checkout.jsx";
 import Order, { orderLoader } from "./pages/Order.jsx";
 import RootLayout from "./components/RootLayout.jsx";
 import OrderNotFound from "./pages/OrderNotFound.jsx";
+import NotFound from "./pages/NotFound.jsx";
+
 
 
 const router = createBrowserRouter(
@@ -16,6 +18,7 @@ const router = createBrowserRouter(
             <Route path="/cart" element={<Cart />}/>
             <Route path="/checkout" element={<Checkout />}/>
             <Route errorElement={<OrderNotFound />} loader={orderLoader} path="/order/:orderId" element={<Order />} />
+            <Route path="*" element={<NotFound />} />
         </Route>
     )
 );
